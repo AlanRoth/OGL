@@ -5,10 +5,8 @@ function useFetch(url) {
     const [response, setResponse] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [options, setOptions] = useState({})
 
     const doFetch = useCallback((options = {}) => {
-        setOptions(options);
         setIsLoading(true);
     }, []);
 
@@ -18,7 +16,7 @@ function useFetch(url) {
         }
         async function fetchData() {
             try {
-                let response = await axios(url, options)
+                let response = await axios(url)
                 setResponse(response.data)
             }catch (err) {
                 let errData = err.response ? err.response.data : "Server Error";
@@ -27,7 +25,7 @@ function useFetch(url) {
             setIsLoading(false);
         };
         fetchData()
-    }, [isLoading, options, url])
+    }, [isLoading, url])
 
     return [{response, error, isLoading}, doFetch]
 }
