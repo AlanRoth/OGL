@@ -8,12 +8,23 @@ function App() {
     const products = FetchURL(endpoint);
     return (
         <>
-            <div className="header">
-                <h1>Dev-Test</h1>
+            <div className="navbar">
+                <ul className="navitems">
+                    <li className="navitem"><a className="active">Products</a></li>
+                    <li className="navitem"><a>Customers</a></li>
+                </ul>
             </div>
             <div className="app">
-                <ProductTable products={products} />
-                <ProductForm endpoint={endpoint}/>
+                <div className="widget-grid">
+                    <div className="widget two-wide">
+                        <h2 className="widgetName">Product List</h2>
+                        <ProductTable products={products} />
+                    </div>
+                    <div className="widget two-wide">
+                        <h2 className="widgetName">New Product</h2>
+                        <ProductForm endpoint={endpoint} />
+                    </div>
+                </div>
             </div>
         </>
     )

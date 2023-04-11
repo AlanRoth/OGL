@@ -1,10 +1,72 @@
-.header {
-    background-color: aqua;
+* {
+     font-family: 'Lato', serif;
+     font-weight: 700;
+     font-size: 1rem;
+     line-height: 2rem;
+}
+
+.navbar {
+    background-color: #254143;
     left: 0;
     top: 0;
     margin: 0;
     padding: 0;
     overflow: hidden;
     width: auto;
+    min-height: 5em;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
     position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    margin: 0 0 0 2em;
+}
+
+.active {
+    background-color: #FCF5E4;
+}
+
+li a:hover:not(.active) {
+    background-color: #A5A094;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px 25px 0 0;
+    padding: 1em 5em 0 5em;
+    background-color: #7E7B72;
+}
+
+.widget {
+    background-color: white;
+    margin: 0;
+    padding: 2rem;
+    border-radius: 25px;
+    max-width: fit-content;
+}
+
+.widget-grid {
+    display: grid;
+    background-color: orange;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+}
+
+.two-wide {
+    grid-column: 1 / span 2;
+}
+
+.one-wide {
+    grid-column: 1 / span 1;
 }

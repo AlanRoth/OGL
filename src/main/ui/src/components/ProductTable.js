@@ -1,3 +1,5 @@
+import '../assets/css/ProductTable.css';
+
 function ProductTable({products}) {
     const rows = [];
 
