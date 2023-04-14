@@ -1,3 +1,8 @@
+:root {
+    --background: #608181;
+    --foreground: #414141;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,5 +10,6 @@
 }
 
 body {
-    background-color: #FCF5E4;
+    background-color: var(--background);
 }
+

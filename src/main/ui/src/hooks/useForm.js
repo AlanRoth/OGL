@@ -2,7 +2,7 @@ import {useState} from "react";
 import axios from "axios";
 
 
-function useForm({form, url}) {
+function useForm({form, url, isUpdate}) {
     const [status, setStatus] = useState(null);
     const [error, setError] = useState(null)
 
@@ -17,7 +17,9 @@ function useForm({form, url}) {
         formData.forEach((value, key) => object[key] = value);
         const formJson = JSON.stringify(object);
 
-        console.log(url)
+        if(!formJson["id"]) {
+            delete formJson["id"];
+        }
 
         const resp = axios.post(url, formJson, {
             headers: {

@@ -1,31 +1,26 @@
 import './assets/css/App.css';
-import ProductTable from "./components/ProductTable";
-import FetchURL from "./components/FetchURL";
-import ProductForm from "./components/ProductForm";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Products from './pages/Products';
+import Customers from './pages/Customers';
+import Navbar from "./components/Navbar";
+import {Suspense} from "react";
 
 function App() {
-    const endpoint = 'http://localhost:8080/product';
-    const products = FetchURL(endpoint);
     return (
         <>
-            <div className="navbar">
-                <ul className="navitems">
-                    <li className="navitem"><a className="active">Products</a></li>
-                    <li className="navitem"><a>Customers</a></li>
-                </ul>
-            </div>
-            <div className="app">
-                <div className="widget-grid">
-                    <div className="widget two-wide">
-                        <h2 className="widgetName">Product List</h2>
-                        <ProductTable products={products} />
+            <BrowserRouter>
+                <div className="App">
+                    <div className="header">
+                        <span></span>
                     </div>
-                    <div className="widget two-wide">
-                        <h2 className="widgetName">New Product</h2>
-                        <ProductForm endpoint={endpoint} />
-                    </div>
+                    <Navbar />
+                    <Routes>
+                        <Route path="/" element={<Products />} />
+                        <Route path="/products" element={<Products />} />
+                        <Route path="/customers" element={<Customers />} />
+                    </Routes>
                 </div>
-            </div>
+            </BrowserRouter>
         </>
     )
 }

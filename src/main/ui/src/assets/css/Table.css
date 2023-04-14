@@ -1,17 +1,15 @@
 table {
     border-collapse: collapse;
     background: white;
-    border-radius: 6px;
+    border-radius: 5px;
     overflow: hidden;
-    max-width: max-content;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+    width: fit-content;
+    height: fit-content;
 }
 
 td, th {
-    padding-left: 8px;
-    text-align:left;
+    padding: 0 5vw 0 5vw;
+    text-align:center;
 }
 
 table tr:nth-of-type(odd) td {
@@ -19,13 +17,11 @@ table tr:nth-of-type(odd) td {
 }
 
 thead tr {
-    height:60px;
     background:#FFED86;
     font-size:16px;
 }
 
 tbody tr {
-    height:48px;
     border-bottom:1px solid #E3F1D5;
 }
 

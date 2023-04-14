@@ -27,12 +27,15 @@ function ProductForm({endpoint}) {
     }
 
     return (
-        <form method="post" onSubmit={handleSubmit} action={endpoint} ref={formElement} target="_blank">
+        <form method="post" onSubmit={handleSubmit} action={endpoint} ref={formElement}>
+            <label>
+                ID: <input name="id" />
+            </label>
             <label>
                 SKU: <input name="sku" required/>
             </label>
             <label>
-                PRICE: <input name="price" type="number" required/>
+                PRICE: <input name="price" type="number" step=".01" required/>
             </label>
             <label>
                 DESCRIPTION: <input name="description"/>
