@@ -1,0 +1,77 @@
+/*.sidebar {*/
+/*    !*background-color: var(--foreground);*!*/
+/*    margin-top: 5%;*/
+/*    position: absolute;*/
+/*}*/
+
+/*ul {*/
+/*    list-style-type: none;*/
+/*    position: fixed;*/
+/*    width: 15%;*/
+/*    height: 100%;*/
+/*    overflow: auto;*/
+/*}*/
+
+/*li a {*/
+/*    text-decoration: none;*/
+/*    padding: 8px 16px;*/
+/*    background-color: var(--foreground);*/
+/*    color: white;*/
+/*    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25)*/
+/*}*/
+
+/*li a.active {*/
+/*    background-color: var(--background);*/
+/*    color: white;*/
+/*}*/
+
+/*li a:hover:not(.active) {*/
+/*    background-color: #A5A094;*/
+/*}*/
+
+/*.navitem {*/
+/*    width: 25%;*/
+/*}*/
+
+.navitem a {
+    display: block;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: var(--foreground);
+    color: white;
+    text-align: center;
+
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25)
+}
+
+.sidebar {
+    background-color: var(--foreground);
+    list-style-type: none;
+    height: 100%;
+    width: 15%;
+    overflow: auto;
+    position: fixed;
+}
+
+.navitem a.active{
+    background-color: var(--background)
+}
+
+.navitem a:hover:not(.active) {
+    background-color: #A5A094;
+}
+
+/*li a:hover:not(.active) {*/
+/*    background-color: #A5A094;*/
+/*}*/
+
+/*.navitem a {*/
+/*    background-color: green;*/
+/*    width: 100%;*/
+/*}*/
+
+/*    position: fixed;*/
+/*    width: 15%;*/
+/*    height: 100%;*/
+/*    overflow: auto;*/
+/*}*/
