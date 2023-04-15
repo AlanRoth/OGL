@@ -2,7 +2,7 @@ import {useRef} from "react";
 import useForm from "../hooks/useForm";
 import useStatusHandler from "../hooks/useStatusHandler";
 
-function ProductForm({endpoint}) {
+function CustomerForm({endpoint}) {
 
     const formElement = useRef(null);
 
@@ -22,13 +22,7 @@ function ProductForm({endpoint}) {
                 ID: <input name="id" />
             </label>
             <label>
-                SKU: <input name="sku" required/>
-            </label>
-            <label>
-                PRICE: <input name="price" type="number" step=".01" required/>
-            </label>
-            <label>
-                DESCRIPTION: <input name="description"/>
+                NAME: <input name="name" required/>
             </label>
             <button type="reset">Reset</button>
             <button type="submit">Submit</button>
@@ -36,4 +30,4 @@ function ProductForm({endpoint}) {
     )
 }
 
-export default ProductForm;
+export default CustomerForm;

@@ -2,7 +2,7 @@ import {useState} from "react";
 import axios from "axios";
 
 
-function useForm({form, url, isUpdate}) {
+function useForm({form, url}) {
     const [status, setStatus] = useState(null);
     const [error, setError] = useState(null)
 
