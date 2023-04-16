@@ -16,9 +16,16 @@ function useFetch(url) {
         }
         async function fetchData() {
             try {
-                let response = await axios(url)
+                let response = await axios.get(url, {
+                    headers: {
+                        'Content-Type':'multipart/form-data',
+                        'Cache-Control':'no-cache',
+                        'Access-Control-Allow-Origin':'*'
+                    }, withCredentials: false
+                })
                 setResponse(response.data)
             }catch (err) {
+                console.log(err);
                 let errData = err.response ? err.response.data : "Server Error";
                 setError(errData)
             }
@@ -26,6 +33,8 @@ function useFetch(url) {
         };
         fetchData()
     }, [isLoading, url])
+
+    console.log({response, error, isLoading});
 
     return [{response, error, isLoading}, doFetch]
 }

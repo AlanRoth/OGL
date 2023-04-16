@@ -9,9 +9,6 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @OneToOne(mappedBy = "address")
-    private Customer customer;
-
     @NotNull
     private String street;
 
@@ -61,13 +58,5 @@ public class Address {
 
     public void setPostcode(String postcode) {
         this.postcode = postcode;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
     }
 }

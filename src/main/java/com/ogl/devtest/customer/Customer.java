@@ -13,8 +13,8 @@ public class Customer {
   @NotNull
   private String name;
 
-  @OneToOne
-  @JoinColumn(name="address", referencedColumnName = "id")
+  @OneToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "address", referencedColumnName = "id")
   private Address address;
 
   public long getId() {
@@ -32,4 +32,13 @@ public class Customer {
   public void setName(String name) {
     this.name = name;
   }
+
+  public Address getAddress() {
+    return address;
+  }
+
+  public void setAddress(Address address) {
+    this.address = address;
+  }
+
 }
