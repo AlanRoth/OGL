@@ -3,7 +3,6 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Products from './pages/Products';
 import Customers from './pages/Customers';
 import Navbar from "./components/Navbar";
-import {Suspense} from "react";
 
 function App() {
     return (

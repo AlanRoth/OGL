@@ -1,0 +1,27 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+input {
+    margin: 10px 0;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,15%);
+    border-bottom:1px solid #27272b;
+    border-radius:10px;
+}
+
+label {
+    color: white;
+}
+
+form {
+    width: 0;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 15%;
+    padding-left: 15%;
+}

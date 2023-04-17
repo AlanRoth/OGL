@@ -17,11 +17,3 @@
     min-height: 5em;
     position: relative;
 }
-
-.table-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 15%;
-    padding: 2em;
-}

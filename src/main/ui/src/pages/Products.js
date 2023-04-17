@@ -12,7 +12,7 @@ function Products() {
             <div className="table-container">
                 <Table items={products} keys={keys} />
             </div>
-            <div className="table-container">
+            <div className="form-container">
                 <ProductForm endpoint={endpoint} />
             </div>
         </>
