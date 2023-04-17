@@ -34,8 +34,6 @@ function useFetch(url) {
         fetchData()
     }, [isLoading, url])
 
-    console.log({response, error, isLoading});
-
     return [{response, error, isLoading}, doFetch]
 }
 

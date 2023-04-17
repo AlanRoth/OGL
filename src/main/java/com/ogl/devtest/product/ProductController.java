@@ -39,4 +39,9 @@ public class ProductController {
   public ResponseEntity<Product> save(@RequestBody Product product) {
     return ResponseEntity.ok(productRepository.save(product));
   }
+
+  @PutMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+  public ResponseEntity<Product> update(@RequestBody Product product) {
+    return save(product);
+  }
 }

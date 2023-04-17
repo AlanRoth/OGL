@@ -9,10 +9,10 @@ function Table({items, keys}) {
         <table>
             <thead>
             <tr>
-                {keys.map(key => <th>{key.toUpperCase()}</th>)}
+                {keys.map((key, index) => <th key={index}>{key.toUpperCase()}</th>)}
             </tr>
             </thead>
-            <tbody>{items.map((item) => <ItemRow item={item} />)}</tbody>
+            <tbody>{items.map((item, index) => <ItemRow key={index} item={item} />)}</tbody>
         </table>
     )
 }
@@ -20,7 +20,7 @@ function Table({items, keys}) {
 function ItemRow({item}) {
     return (
         <tr>
-            {Object.keys(item).map((key) => <td>{item[key]}</td>)}
+            {Object.keys(item).map((key, index) => <td key={index}>{item[key]}</td>)}
         </tr>
     )
 }

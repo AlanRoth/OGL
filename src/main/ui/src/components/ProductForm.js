@@ -1,6 +1,7 @@
 import {useRef} from "react";
 import useForm from "../hooks/useForm";
 import useStatusHandler from "../hooks/useStatusHandler";
+import '../assets/css/Form.css';
 
 function ProductForm({endpoint}) {
 
@@ -17,7 +18,7 @@ function ProductForm({endpoint}) {
     }
 
     return (
-        <form method="post" onSubmit={handleSubmit} action={endpoint} ref={formElement}>
+        <form onSubmit={handleSubmit} action={endpoint} ref={formElement}>
             <label>
                 ID: <input name="id" />
             </label>

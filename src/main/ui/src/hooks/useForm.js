@@ -13,17 +13,21 @@ function useForm({form, url}) {
         }
 
         const formData = new FormData(form);
-        const object = {};
-        formData.forEach((value, key) => object[key] = value);
-        const formJson = JSON.stringify(object);
+        const jsonObject = {};
+        formData.forEach((value, key) => jsonObject[key] = value);
 
-        if(!formJson["id"]) {
-            delete formJson["id"];
-        }
+        //Determine Update or Upload
+        const method = jsonObject['id'] ? 'put' : 'post';
 
-        const resp = axios.post(url, formJson, {
-            headers: {
-                'Content-Type': 'application/json'
+        axios({
+            method: method,
+            url: url,
+            data: jsonObject,
+            config: {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type':'application/json'
+                }
             }
         }).then(response => {
             if(response.status !== 200) {

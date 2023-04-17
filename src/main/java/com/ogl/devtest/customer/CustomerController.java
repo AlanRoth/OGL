@@ -24,4 +24,10 @@ public class CustomerController {
     public ResponseEntity<Customer> save(@RequestBody Customer customer) {
         return ResponseEntity.ok(customerRepository.save(customer));
     }
+
+    @PutMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Customer> update(@RequestBody Customer customer) {
+        return save(customer);
+    }
+
 }

@@ -18,7 +18,7 @@ function Customers() {
             <div className="table-container">
                 <Table items={customers} keys={keys} />
             </div>
-            <div className="table-container">
+            <div className="form-container">
                 <CustomerForm endpoint={endpoint} />
             </div>
         </>

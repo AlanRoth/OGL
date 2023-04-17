@@ -28,3 +28,11 @@ tbody tr {
 tbody tr:last-child {
     border:0;
 }
+
+.table-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15%;
+    padding: 2em;
+}
